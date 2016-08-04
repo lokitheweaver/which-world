@@ -1,0 +1,248 @@
+15 June notes:
+
+why is biofuel and chemical agent in Improvised Armor ? : )
+
+crossbow perk includes gunHuntingRifleScoped at level 1?  : )
+
+animal traps perk seems a little expensive (8 points vs. chemistry which is only 7 points, lockpicks which is 10 or improvised armor which is 5 / level)
+
+clubs need to be locked with perk, low cost - everyone gets basic, 5 points for each improvement?
+
+cooking quest - did you use "fetch" or "fetch keep"?  May be reason it completes early
+
+loot stuff:
+	container 42 - check % - I only get .91 total and lots of gun duplicates -guns are good, but . . . 0.3+0.275+0.2+0.075+0.075+0.075 = 1
+	assorted seeds vs. animal feed (with recipe to turn assorted seeds into animal feed) - just "feels" better, someone may actually want to plant some seeds and come back later most will not have animal traps or need them (unless you tweak food to require more hunting / farming - Medieval? ? ?)
+
+Starting Gear - lower quality clothes?  Allows player to "upgrade" as they find loot; bare minimum (gun, ammo, clothes, possibly a class specific item or two, food?, water?, bandage? - food / water is plentiful, zombie loot and POI, corn, potato, yucca)
+
+energy drink - need recipe (use coffee beans?); add stamina recovery over time buff
+
+Lokiwater recipe - murky in the quest, still clean in the recipe - make it just "purified" so it stacks; perhaps for CHS use the clean water - no one is dying of thirst as in Vanilla
+
+cooking - change "boiled corn" to roasted corn - use grill
+
+Cold drink versions - can we have recipe to make them "not cold" (stacking) some fridges not working to cool beverages (shiny metal "top" in ranger POI)
+
+check damage (base) for all guns, bows and crossbow
+
+recipes with glue (less glue - a whole bottle goes a long way : )
+
+grain alcohol is not used for much - no medical? but a loot on nurses (replace with Cider? Blueberry Mead? Take out Beer and Grain Alcohol and add both Cider / Blueberry : )
+
+Healing stuff
+	add more options for each tier - healing bandage and first aid kits
+		(watch redundancy - healing agent, + pain med)
+		replace alcohol with H2O2 for nurse loot / med cabinet?
+	tier 2 - bandage + alcohol; bandage + aloe; bandage + h2o2; healing agent
+	tier 3 - any tier 2 bandage + pain med + sewing kit (+duct tape); antibiotics (if they still work ? - later implementation ? )
+
+ammo crafting - still need bullet tumbler in workstation, but can craft in backpack - however, no way to convert casings?  (I think with the new ammo cases, just remove ammo crafting - use what you have got - unless you find a forge house and have calipers)
+
+check tool drops - since we can't craft them, they might be a less rare drop
+	(all POI's, only certain containers, certain zombies - no just snow biome)
+
+survival stove - could it require a "fuel log" to craft vs. pot and grill?  (Sterno?)
+	of course once "destroyed" it would lose any fuel timer (but fuel logs last a long time)
+	pot craft from scrap (vs. just a tin can?)
+	grill craft from scrap (vs. 5/7/8 iron pipes?)
+
+cooking - change "boiled corn" to roasted corn - use grill
+
+cull quests / maps - only those that "fit"?  (too many useless - nail some chicks, drunk and disorderly, etc. - check and see if any play tester actually goes to the trouble of finding "treasure")
+
+Supply Crates:
+	no first aid kits (make people get the perk : ) - replace with aloe or H2O2 so they can make tier 2
+	ammo specials (extra damage from HP,slug. siege - do these matter in CHS)
+	What if supply weapons "always" had a mod? - makes them rare / special
+	actual power tool might be nice - even if it is just the parts (all) - BUT CRAFTING? - chainsaw, auger, nailgun - fun but probably not needed
+	weed cleaver - does it have a use in CHS?  (more base building) - a hunting knife, skinning knife or butcher knife would be more useful
+	tools - steel only?  (makes it worth keeping)
+	"weapon" tools - sledge hammer, sycthe, claw hammer (pickaxe?, fireaxe?)
+	non weapon tools - wrench, shovel, hoe (not needed?)
+
+	<lootgroup name="SupplyGroups" count="1">
+***		<item group="SupplyMaterials"/> (all crafting stuff, just takes up room)
+***		<item group="SupplyFood"/> (redundant - military ration is more appropriate)
+		<item group="SupplyWeapon"/> (need ql lower limit - do we need ammo in this group, also?)
+		<item group="SupplyAmmo"/> (chance for special - but are they needed?)
+***		<item group="SupplyAutomotive"/> (minibike and powertools)
+		<item group="SupplyTools"/> (need ql lower limit, items missing - fireaxe iron + steel, chainsaw)
+	</lootgroup>
+	<lootgroup name="SupplyGeneric" count="all">
+?		<item name="painkillers" count="2,5"/>
+***		<item name="firstAidKit" count="2,3"/>
+		<item name="antibiotics" count="1,2"/>
+		<item name="waterPurified" count="3,4"/>
+	    	<item name="militaryRation" count="2,3"/>
+???	    	<item group="clothes"/>
+***		<item name="animalFeed" count="2,5"/>
+***		<item group="books"/> (change to specific quest line? Later?)
+***?		<item group="tools"/> (tools here, + supply tools more appropriate)
+	</lootgroup>
+
+
+*************  Supply Crate Suggestion *****************
+
+Supply crate loot (9 vs. 10)
+	food (2-3 military rations)
+	water (3-4 purified water)
+	medicine (painkillers 2-5; plus aloe cream or hydrogen peroxide 2-3; OR just the aloe cream / h2o2 but 2-5?***)
+	antibiotics (1 perhaps 1-2 - MP??? - perhaps change when / if quest stuff applies)
+	Quest note (now just pratical - cooking?, Kickz?, Loki? - later questline?)
+	gun (1 with mods, lowest ql ~250?)
+	ammo (1 generic ammo box)
+	tool (1 hand tool, lowest ql ~250, steel only where appropriate)
+
+**************
+
+Classes
+
+SurvivalGear (all classes start with this stuff)	
+	Survival_Shirts (ql 50-100)
+	Survival_Pants  (ql 50-100)
+	canBeef x1 (military ration x1)
+	painkillers x1 (possibly remove if changed to healing bandage)
+	bottledWater x1	(purified water x1)
+	bandage x1 (healing bandage x1)
+	wornBoots  (ql 50-100)
+
+NEW - all start with gun + 100 rounds of ammo, light source, class special item, 55 points
+
+Rifleman (hunting rifle focus)
+	SurvivalGear
+	cowboy hat
+	flashlight (to attach to rifle)
+	gunHuntingRifle (250cc)
+	762mmBullet (100)
+	skinning knife
+	perkRifleman
+		Rifles value="20"
+		Gun Smithing value="20"
+		gun hunting rifle (15 points)
+
+Shotgun Sam (pumpshotgun focus)
+	SurvivalGear
+	Pimphat
+	flashlight (to attach to shotgun)
+	gunPumpShotgun (250cc)
+	shotgunShell (100)
+	butcherknife
+	perkShotgunSam
+		Shotguns value="20"
+		Gun Smithing value="20"
+		Gun Pump Shotgun (15 points)
+
+Gunman	(Pistol focus needs)
+	SurvivalGear
+	Ranger hat (light)
+	gunPistol (250cc)
+	9mmBullet (100)
+	huntingknife
+	perkGunman
+		Pistols value="20"
+		Gun Smithing" value="20"
+		Gun Pistol (10 points)
+		Weapon Smithing value="5"
+
+Bruiser (shotgun + melee focus)
+	SurvivalGear
+	mining helmet (light)
+	gunPumpShotgun (250cc)
+	shotgunShell (100)
+	club - (barbed) 
+	perkBruiser
+		Weapon Smithing value="15"
+		Leather Tanning (10 points) 
+		Improvised Armor (level 2 = 10 points)
+		Pummel Pete (level 1 = 10 points)
+		Leatherworking value="10" (*** if scrap uses leatherworking, change to armor value = 10)
+
+Medic (pistol + medicine)
+	SurvivalGear
+	militaryHelmet
+	led goggles
+	gunPistol (250cc)
+	9mmBullet (100)
+	fireaxe (steel?)
+	perkMedic
+		Medicine value="10" />
+		Gun Smithing value="10" />
+		Pistols value="10" />
+		medical (level 2 = 10 points)
+		Gun Pistol (10 points)
+		Tool Smithing value="5"
+
+Survivor (hunting rifle and scavenging)
+	SurvivalGear
+	swatHelmet
+	mole goggles (led if no moles)
+	gunHuntingRifle (250cc)
+	762mmBullet (100)
+	wrench
+	perkSurvivor
+		Gun Smithing value="10"
+		gun hunting rifle (15 points)
+		Tool Smithing value="10"
+		Scavenging" value="20"
+
+**************** ala carte options **************
+
+start with random gun
+	lootgroup startinggun (1)
+		hunting rifle
+		pumpshotgun
+		pistol
+
+alacartewithgun
+	SurvivalGear (lootgroup)
+	cowboy hat
+	flashlight
+	startinggun (lootgroup)
+	generic ammo box x2
+	hunting knife
+	55 notes (turn to skill points to buy skills)
+
+alacartewithoutgun
+	SurvivalGear (lootgroup)
+	Pimp hat
+	led goggles
+	55 notes + 18 = 73 total (turn to skill points to buy skills)
+
+******************** test ********************
+
+Medical (level 1 - 5 points)
+wooden bow (level 1 - 5 points)
+Weapon smithing (10 points *craft some arrows, first : )
+
+scavanging (30 points?)
+
+Tool smithing (5 points?)
+_____
+
+55 points
+
+18 points + -2 from weaponsmithing = 20 (2 levels of quality joe)
+
+lockpicks (10 points) - unlock safes possibly 25 hits?
+
+sewing (5 points)
+
+traps (level 2 is trussing spike = 10 points)
+
+***** crafting quality ****
+
+<effect name="CraftingQuality">
+			<setvalue skill_level="1,10" value="1,239"/>
+			<setvalue skill_level="10,20" value="239,316"/>
+			<setvalue skill_level="20,30" value="316,371"/>
+			<setvalue skill_level="30,40" value="371,416"/>
+			<setvalue skill_level="40,50" value="416,455"/>
+			<setvalue skill_level="50,60" value="455,489"/>
+			<setvalue skill_level="60,70" value="489,520"/>
+			<setvalue skill_level="70,80" value="520,549"/>
+			<setvalue skill_level="80,90" value="549,575"/>
+			<setvalue skill_level="90,100" value="575,600"/>
+		</effect>
+
+
